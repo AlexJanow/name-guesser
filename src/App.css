@@ -22,8 +22,6 @@ main {
 .App__nav {
   display: flex;
   justify-content: space-between;
-  padding-left: 6%;
-  padding-right: 6%;
 }
 .App__nav a.active {
   font-weight: bold;
@@ -39,4 +37,20 @@ main {
   max-width: 400px;
   margin: auto;
   border: 5px solid whitesmoke;
+}
+
+form {
+  background-color: whitesmoke;
+}
+input {
+  all: unset;
+  border: 5px solid white;
+}
+
+button {
+  all: unset;
+  background-color: whitesmoke;
+  border: 5px solid white;
+  font-weight: bold;
+  cursor: pointer;
 }

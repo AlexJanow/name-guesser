@@ -45,7 +45,12 @@ export default function Nation() {
       </header>
       <h2>Nation guess</h2>
       <form onSubmit={handleSubmit}>
-        <input type="text" value={value} onChange={handleChange} />
+        <input
+          placeholder="Insert a name..."
+          type="text"
+          value={value}
+          onChange={handleChange}
+        />
 
         <button type="submit">Submit</button>
       </form>

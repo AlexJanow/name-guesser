@@ -36,7 +36,12 @@ export default function Age() {
       </header>
       <h2>Age guess</h2>
       <form onSubmit={handleSubmit}>
-        <input type="text" value={value} onChange={handleChange} />
+        <input
+          placeholder="Insert a name..."
+          type="text"
+          value={value}
+          onChange={handleChange}
+        />
 
         <button type="submit">Submit</button>
       </form>
