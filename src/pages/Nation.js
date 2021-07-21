@@ -25,7 +25,7 @@ export default function Nation() {
     fetch(url)
       .then((res) => res.json())
       .then((data) => {
-        if (data === "0") {
+        if (data === undefined) {
           console.log(null);
         } else {
           setName(data.name);
