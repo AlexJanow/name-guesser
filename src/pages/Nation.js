@@ -37,7 +37,6 @@ export default function Nation() {
         }
       });
   }, [search]);
-
   return (
     <div>
       <header>
