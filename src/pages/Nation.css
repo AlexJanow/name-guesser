@@ -1,0 +1,36 @@
+main {
+  width: fit-content;
+  margin: auto;
+}
+
+p {
+  width: fit-content;
+  margin: auto;
+  padding: 3%;
+}
+h2 {
+  width: fit-content;
+  margin: auto;
+  padding: 10%;
+}
+header {
+  margin: auto;
+  padding: 1rem;
+  border-bottom: 1px solid black;
+}
+
+header h1 {
+  width: fit-content;
+  margin: auto;
+}
+
+.result__nation {
+  padding: 5%;
+  font-size: 1.5rem;
+  border: 5px solid white;
+  background-color: whitesmoke;
+}
+
+.name__nation {
+  text-decoration: grey underline;
+}
