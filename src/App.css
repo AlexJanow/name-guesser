@@ -1,22 +1,28 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 .App {
-  text-align: center;
+  display: grid;
+  grid-template-rows: 75px auto 75px;
+  height: 100vh;
+  background-color: lightblue;
 }
 header {
   margin-top: auto;
 }
 
 main {
-  height: 90vh;
-  margin: 0;
 }
 .App__footer {
   padding: 1rem;
   border-top: 1px solid black;
-  position: relative;
-  margin-top: auto;
-  bottom: 0;
-  height: auto;
   font-size: 2rem;
+  background-color: lightblue;
 }
 
 .App__nav {
@@ -32,12 +38,13 @@ main {
   color: black;
 }
 
-.uber__div {
+/* .uber__div {
   background-color: lightblue;
   max-width: 400px;
+
   margin: auto;
   border: 5px solid whitesmoke;
-}
+} */
 
 form {
   background-color: whitesmoke;

@@ -4,7 +4,7 @@ export default function Gender() {
   const [value, setValue] = useState("");
   const [name, setName] = useState("");
   const [gender, setGender] = useState("");
-  const [search, setSearch] = useState("Name");
+  const [search, setSearch] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
   function handleChange(event) {
@@ -15,24 +15,22 @@ export default function Gender() {
     setSearch(value);
   }
 
-  console.log();
   useEffect(() => {
-    setIsLoading(true);
-    const url = `https://api.genderize.io?name=${search}`;
-    fetch(url)
-      .then((res) => res.json())
-      .then((data) => {
-        setName(data.name);
-        setGender(data.gender);
-        setIsLoading(false);
-      });
+    if (search) {
+      setIsLoading(true);
+      const url = `https://api.genderize.io?name=${search}`;
+      fetch(url)
+        .then((res) => res.json())
+        .then((data) => {
+          setName(data.name);
+          setGender(data.gender);
+          setIsLoading(false);
+        });
+    }
   }, [search]);
 
   return (
     <div>
-      <header>
-        <h1>GENDER</h1>
-      </header>
       <h2>Gender guess</h2>
       <form onSubmit={handleSubmit}>
         <input

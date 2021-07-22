@@ -4,7 +4,7 @@ export default function Age() {
   const [value, setValue] = useState("");
   const [name, setName] = useState("");
   const [age, setAge] = useState("");
-  const [search, setSearch] = useState("Name");
+  const [search, setSearch] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
   function handleChange(event) {
@@ -17,23 +17,22 @@ export default function Age() {
   }
   console.log();
   useEffect(() => {
-    setIsLoading(true);
-    const url = `https://api.agify.io?name=${search}`;
-    fetch(url)
-      .then((res) => res.json())
-      .then((data) => {
-        setName(data.name);
-        setAge(data.age);
+    if (search) {
+      setIsLoading(true);
+      const url = `https://api.agify.io?name=${search}`;
+      fetch(url)
+        .then((res) => res.json())
+        .then((data) => {
+          setName(data.name);
+          setAge(data.age);
 
-        setIsLoading(false);
-      });
+          setIsLoading(false);
+        });
+    }
   }, [search]);
 
   return (
     <div>
-      <header>
-        <h1>AGE</h1>
-      </header>
       <h2>Age guess</h2>
       <form onSubmit={handleSubmit}>
         <input
